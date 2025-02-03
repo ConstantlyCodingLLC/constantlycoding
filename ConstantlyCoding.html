@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConstantlyCoding LLC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #002366;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header img {
+            position: absolute;
+            top: 50%;
+            left: 1rem;
+            transform: translateY(-50%);
+            height: 60px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        #hero {
+            background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+            background-color: #002366;
+        }
+        #hero h2 {
+            font-size: 2.5rem;
+        }
+        #hero p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+        .btn {
+            background: #002366;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .btn:hover {
+            background: #001a4d;
+        }
+        #services, #about, #contact {
+            padding: 2rem;
+            text-align: center;
+        }
+        h2 {
+            font-size: 2rem;
+            color: #002366;
+        }
+        .service-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+        .service {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            width: 300px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .service h3 {
+            color: #002366;
+            margin-top: 0;
+        }
+        .service p {
+            margin-bottom: 1rem;
+        }
+        .service .details {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            z-index: 10;
+        }
+        .service:hover .details {
+            display: block;
+        }
+        footer {
+            background: #002366;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+        }
+        footer img {
+            position: absolute;
+            top: 50%;
+            left: 1rem;
+            transform: translateY(-50%);
+            height: 40px;
+        }
+        footer p {
+            margin: 0;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background: #002366;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #001a4d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/mnt/data/vector_ready_logo_2_inPixio.png" alt="ConstantlyCoding Logo">
+        <div class="container">
+            <h1>ConstantlyCoding LLC</h1>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Innovative Software Solutions & Electronic Repairs</h2>
+            <p>At Constantly Coding LLC, we deliver tailored software and IT solutions, including custom apps, web development, ticketing systems, and BOH systems. Our mission is to empower businesses with innovative, scalable technology. Let’s code the future together!</p>
+            <a href="#services" class="btn">Explore Services</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-list">
+                <div class="service">
+                    <h3>Ticketing Systems</h3>
+                    <p>Customizable ticketing systems to streamline your business operations.</p>
+                    <div class="details">
+                        <p><strong>Pricing:</strong> $75 monthly fee. Including $20 monthly fee for IT Support</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <h3>Invoice Systems</h3>
+                    <p>Efficient and user-friendly invoice management solutions.</p>
+                    <div class="details">
+                        <p><strong>Pricing:</strong> $60 monthly fee.</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <h3>Remote Access Systems</h3>
+                    <p>Seamless remote system setups for enhanced connectivity.</p>
+                    <div class="details">
+                        <p><strong>Pricing:</strong> Starting at $600 monthly fee. Including $175 monthly fee for IT Support</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <h3>App & Website Development</h3>
+                    <p>We create tailored applications and websites to meet your unique needs.</p>
+                    <div class="details">
+                        <p><strong>Pricing:</strong> Starting at $1000 for websites and $1500 for apps. Including a $250 monthly fee for IT Support.</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <h3>Electronic Repair Services</h3>
+                    <p>Expert repair services for laptops, desktops, and other electronic devices.</p>
+                    <div class="details">
+                        <p><strong>Pricing:</strong> Diagnostics $15, Repairs starting at $50.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At Constantly Coding LLC, we deliver tailored software and IT solutions, including custom apps, web development, ticketing systems, and BOH systems. Our mission is to empower businesses with innovative, scalable technology. Let’s code the future together!</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Have a project in mind or need help with electronic repairs? Reach out to us!</p>
+            <form action="mailto:constantlycodingllc@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+              
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <img src="/mnt/data/vector_ready_logo_2_inPixio.png" alt="ConstantlyCoding Logo">
+        <div class="container">
+            <p>&copy; 2024 ConstantlyCoding LLC. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
