@@ -69,7 +69,7 @@
         .btn:hover {
             background: #001a4d;
         }
-        #services, #about, #contact {
+        #services, #about, #contact, #payment {
             padding: 2rem;
             text-align: center;
         }
@@ -168,7 +168,7 @@
 </head>
 <body>
     <header>
-        <img src="E:\CONSTANTLY CODING LLC\Logos/keyboard.png"
+        <img src="E:/CONSTANTLY CODING LLC/Logos/keyboard.png" alt="Constantly Coding Logo">
         <div class="container">
             <h1>ConstantlyCoding LLC</h1>
             <nav>
@@ -176,6 +176,7 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="#payment">Payment</a></li>
                 </ul>
             </nav>
         </div>
@@ -258,9 +259,25 @@
         </div>
     </section>
 
+    <section id="payment">
+        <div class="container">
+            <h2>Make a Payment</h2>
+            <p>Select a payment option below to proceed with your purchase.</p>
+            <!-- Sample PayPal button (replace with your actual button code) -->
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="your-paypal-business-email@example.com">
+                <input type="hidden" name="item_name" value="Custom Software Development">
+                <input type="hidden" name="amount" value="1000">
+                <input type="hidden" name="currency_code" value="USD">
+                <button type="submit" class="btn">Pay Now</button>
+            </form>
+        </div>
+    </section>
+
     <footer>
-        <img src="/mnt/data/vector_ready_logo_2_inPixio.png"        
-<div class="container">
+        <img src="E:/CONSTANTLY CODING LLC/Logos/keyboard.png" alt="Constantly Coding Logo">
+        <div class="container">
             <p>&copy; 2024 ConstantlyCoding LLC. All rights reserved.</p>
         </div>
     </footer>
