@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Quick Email</title>
+  <title>Verification</title>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
     button {
       padding: 12px 24px;
       font-size: 16px;
@@ -16,13 +25,31 @@
     button:hover {
       background-color: #0056b3;
     }
+    #verification-message {
+      font-size: 20px;
+      color: green;
+      margin-top: 20px;
+      display: none;
+    }
   </style>
 </head>
 <body>
 
-<button onclick="location.href='mailto:recipient@example.com?subject=Hello&body=This is a quick email.'">
-  Send Email
-</button>
+<button onclick="sendVerification()">Send Verification</button>
+
+<div id="verification-message">
+  ✅ Verification sent successfully!
+</div>
+
+<script>
+  function sendVerification() {
+    // Simulating sending a verification email
+    // For a real email system, you'd need a backend or API service
+
+    // Display confirmation message
+    document.getElementById('verification-message').style.display = 'block';
+  }
+</script>
 
 </body>
 </html>
