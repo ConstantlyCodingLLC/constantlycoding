@@ -1,45 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Email Sender</title>
+  <title>Quick Email</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f0f0f0;
-    }
     button {
-      padding: 15px 30px;
-      font-size: 18px;
+      padding: 12px 24px;
+      font-size: 16px;
       color: white;
-      background-color: #4CAF50;
+      background-color: #007bff;
       border: none;
-      border-radius: 10px;
+      border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s;
     }
     button:hover {
-      background-color: #45a049;
+      background-color: #0056b3;
     }
   </style>
 </head>
 <body>
 
-<button onclick="sendEmail()">Send Email</button>
-
-<script>
-  function sendEmail() {
-    const recipient = "recipient@example.com";
-    const subject = "Automatic Email";
-    const body = "Hello, this is an automated email.";
-    
-    // Using mailto (requires email client)
-    window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  }
-</script>
+<button onclick="location.href='mailto:recipient@example.com?subject=Hello&body=This is a quick email.'">
+  Send Email
+</button>
 
 </body>
 </html>
