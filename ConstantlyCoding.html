@@ -164,7 +164,54 @@
         button:hover {
             background: #001a4d;
         }
-    </style>
+    
+@media (max-width: 768px) {
+    header img,
+    footer img {
+        height: 40px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+        padding: 0 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    #hero h2 {
+        font-size: 1.8rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    .service-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        width: 90%;
+    }
+
+    form {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    button, .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+</style>
 </head>
 <body>
     <header>
@@ -236,7 +283,7 @@
     <section id="about">
         <div class="container">
             <h2>About Us</h2>
-            <p>Welcome to CONSTANT CODING LLC, where innovation meets functionality. We are a dynamic software development company dedicated to crafting tailored digital solutions that empower businesses and streamline operations. Our expertise spans across designing and developing professional ticketing systems, websites, and mobile applications, all engineered to meet the unique needs of our clients.</p>
+            <p>Welcome to CONSTANTLY CODING LLC, where innovation meets functionality. We are a dynamic software development company dedicated to crafting tailored digital solutions that empower businesses and streamline operations. Our expertise spans across designing and developing professional ticketing systems, websites, and mobile applications, all engineered to meet the unique needs of our clients.</p>
         </div>
     </section>
 
