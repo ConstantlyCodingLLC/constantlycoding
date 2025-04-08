@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Make a Payment | CONSTANT CODING LLC</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      background-color: #0b1120;
+      padding: 50px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100vh; /* Set the height to full viewport */
+    }
+
+    header {
+      background-color: #1e2a47; /* Darker navy background for header */
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      padding: 10px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    h2 {
+      color: #38bdf8;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #e2e8f0;
+      margin-bottom: 30px;
+    }
+
+    .paypal-form {
+      display: inline-block;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    input[type="submit"] {
+      background-color: #38bdf8;
+      color: #0b1120;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border: none;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #00bfff;
+    }
+
+    footer {
+      background-color: #1e2a47;
+      color: #e2e8f0;
+      text-align: center;
+      padding: 20px;
+      font-weight: 600;
+      width: 100%;
+      margin-top: auto; /* This ensures the footer is at the bottom of the page */
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="ticketing.html">Ticketing System</a>
+      <a href="cable-running.html">Cable Running</a>
+      <a href="app-creation.html">App/Web</a>
+      <a href="networking.html">Networking</a>
+      <a href="contact-us.html">Contact</a>
+    </nav>
+  </header>
+
+  <h2>Make a Payment</h2>
+  <p>Thank you for choosing CONSTANTLY CODING LLC. Please make your payment below.</p>
+
+ <button class="home-button" onclick="window.location.href='thankyou.html';">
+
+
+  <!-- PayPal Button Form -->
+  <div class="paypal-form">
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <input type="hidden" name="cmd" value="_s-xclick" />
+      <input type="hidden" name="hosted_button_id" value="YOUR_PAYPAL_BUTTON_ID" />
+      <input type="submit" value="Pay Now" />
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 CONSTANTLY CODING LLC. All Rights Reserved.</p>
+  </footer>
+
+</body>
+
+</html>

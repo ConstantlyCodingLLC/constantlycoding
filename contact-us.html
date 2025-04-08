@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | CONSTANT CODING LLC</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%; /* Ensure the body takes up full height */
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      background-color: #0b1120; /* Navy Blue Background */
+      overflow-x: hidden;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* This ensures content is spaced out evenly */
+      min-height: 100vh; /* Ensures the page takes up full viewport height */
+    }
+
+    header {
+      background-color: #1e2a47; /* Darker navy background */
+      padding: 10px 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      padding: 10px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    /* Main Content (Contact Us Section) */
+    section {
+      text-align: center;
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 8px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+      flex: 1; /* Allow this section to take remaining space and center it */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      color: #38bdf8;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #e2e8f0;
+      margin-bottom: 30px;
+    }
+
+    label {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      display: inline-block;
+      color: #e2e8f0;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: none;
+      font-size: 1.1rem;
+    }
+
+    button {
+      background-color: #38bdf8;
+      color: #0b1120;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      border: none;
+    }
+
+    button:hover {
+      background-color: #00bfff;
+      transform: translateY(-3px);
+    }
+
+    /* Success Message Styling */
+    .success-message {
+      background-color: #38bdf8;
+      color: #0b1120;
+      padding: 20px;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      display: none;
+      margin-top: 20px;
+    }
+
+    footer {
+      background-color: #1e2a47;
+      color: #e2e8f0;
+      text-align: center;
+      padding: 20px;
+      font-weight: 600;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="ticketing.html">Ticketing System</a>
+      <a href="cable-running.html">Cable Running</a>
+      <a href="app-creation.html">App/Web</a>
+      <a href="networking.html">Networking</a>
+      <a href="store.html">Store</a>
+      <a href="payments.html">Payments</a>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Let’s talk. Whether it’s a quick question or a full project, we’re here to help.</p>
+
+    <form id="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+
+    <!-- Success message (hidden initially) -->
+    <div id="success-message" class="success-message">
+      Thank you! Your message has been successfully sent. We'll get back to you soon.
+      <br /><br />
+      <a href="home.html" class="cta-button">GO TO HOME PAGE</a>
+    </div>
+  </section>
+
+  <script>
+    // Handle form submission
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent the default form submission
+
+      // Hide the form and show the success message
+      document.getElementById('contact-form').style.display = 'none';
+      document.getElementById('success-message').style.display = 'block';
+    });
+  </script>
+
+  <footer>
+    <p>&copy; 2025 CONSTANT CODING LLC. All Rights Reserved.</p>
+  </footer>
+
+</body>
+
+</html>

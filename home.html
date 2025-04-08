@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CONSTANT CODING LLC - Home</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; /* Ensure the body takes up full height */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  background-color: #0b1120; /* Navy Blue Background */
+  overflow-x: hidden;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* This ensures content is spaced out evenly */
+}
+
+header {
+  background-color: #1e2a47; /* Darker navy background */
+  padding: 10px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+/* Logo Button Styles */
+.home-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.home-button img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 5px solid #38bdf8;
+  padding: 5px;
+  animation: logoGlow 3s infinite alternate;
+}
+
+@keyframes logoGlow {
+  0% {
+    box-shadow: 0 0 15px #38bdf8, 0 0 30px #00bfff;
+  }
+
+  100% {
+    box-shadow: 0 0 25px #38bdf8, 0 0 50px #00bfff;
+  }
+}
+
+/* Main Content */
+section {
+  text-align: center;
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: #38bdf8;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #e2e8f0;
+  margin-bottom: 30px;
+}
+
+/* Call to Action (CTA) Buttons */
+.cta-button {
+  background-color: #38bdf8;
+  color: #0b1120;
+  text-decoration: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  margin: 10px;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #00bfff;
+  transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+  background-color: #1e2a47;
+  color: #e2e8f0;
+  text-align: center;
+  padding: 20px;
+  font-weight: 600;
+  width: 100%;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.landing-page {
+  animation: fadeIn 1s ease-in;
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- Header Navigation -->
+  <header>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="ticketing.html">Ticketing System</a>
+      <a href="cable-running.html">Cable Running</a>
+      <a href="app-creation.html">App/Web</a>
+      <a href="networking.html">Networking</a>
+      <a href="contact-us.html">Contact</a>
+      <a href="store.html">Store</a>
+      <a href="payments.html">Payments</a>
+    </nav>
+  </header>
+  <!-- Main Section -->
+  <section>
+    <h1>Welcome to CONSTANTLY CODING LLC</h1>
+    <p>We specialize in innovative software development, network solutions, and more to help your business grow and succeed in the digital world. Explore our services:</p>
+    <div>
+      <a href="ticketing.html" class="cta-button">Learn More about Ticketing System</a>
+      <a href="cable-running.html" class="cta-button">Learn More about Cable Running</a>
+      <a href="app-creation.html" class="cta-button">Learn More about App Creation</a>
+      <a href="networking.html" class="cta-button">Learn More about Networking</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 CONSTANTLY CODING LLC. All Rights Reserved.</p>
+  </footer>
+
+</body>
+
+</html>

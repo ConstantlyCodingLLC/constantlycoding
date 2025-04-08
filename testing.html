@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CONSTANT CODING LLC</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Styling -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      background-color: #0b1120; /* Navy Blue Background */
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* Logo Button Styles */
+    .home-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .home-button img {
+      width: 60px; /* Adjust size */
+      height: 60px;
+      border-radius: 50%;
+      border: 5px solid #38bdf8;
+      padding: 5px;
+      animation: logoGlow 3s infinite alternate;
+    }
+
+    /* Logo Glow Animation */
+    @keyframes logoGlow {
+      0% {
+        box-shadow: 0 0 15px #38bdf8, 0 0 30px #00bfff;
+      }
+      100% {
+        box-shadow: 0 0 25px #38bdf8, 0 0 50px #00bfff;
+      }
+    }
+
+    /* Landing Page Styles */
+    .landing-page {
+      font-family: 'Orbitron', sans-serif;
+      background: #0b1120;
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+      filter: brightness(0.9);
+      animation: fadeIn 2s ease-in;
+    }
+
+    /* About Section Styles */
+    #about {
+      margin: 50px auto;
+      max-width: 800px;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    #about h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      color: #38bdf8;
+      margin-bottom: 20px;
+    }
+
+    #about p {
+      font-size: 1.2rem;
+      color: #e2e8f0;
+      line-height: 1.8;
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #0b1120;
+      color: #e2e8f0;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      font-weight: 600;
+    }
+
+    /* Animation for Fade-in */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Home Button in the Top Right -->
+  <button class="home-button" onclick="window.location.href='home.html';">
+    <!-- Replace with your logo image path -->
+    <img src="images/logo.png" alt="Constantly Coding LLC Logo" />
+  </button>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>Welcome to Constantly Coding LLC</h2>
+    <p>
+      At Constantly Coding LLC, we are committed to providing innovative, customized solutions that help businesses thrive in a rapidly evolving digital landscape. Our team of skilled developers and technicians is dedicated to delivering high-quality, scalable systems designed to enhance your business operations and improve customer experience.
+    </p>
+    <p>
+      We specialize in software development, networking solutions, and technical installations. Our approach focuses on building user-friendly, reliable systems that can be tailored to your unique needs.
+    </p>
+    <p>
+      With Constantly Coding LLC, you get transparent pricing and creative solutions that bring maximum value to your business.
+    </p>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 CONSTANTLY CODING LLC. All Rights Reserved.</p>
+  </footer>
+
+</body>
+
+</html>
