@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CONSTANT CODING LLC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -16,6 +17,55 @@
       background-color: #f4f4f9;
       color: #111;
     }
+
+    /* Landing Page Style */
+    .landing-page {
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .landing-page img.logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .landing-page h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #38bdf8;
+    }
+
+    .landing-page p.tagline {
+      font-size: 1.2rem;
+      margin: 15px 0;
+      color: #e2e8f0;
+    }
+
+    .landing-page .cta button {
+      background: #38bdf8;
+      color: #0f172a;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .landing-page .cta button:hover {
+      background: #0ea5e9;
+    }
+
+    /* Header and Navigation */
     header {
       background: #000d2b;
       color: white;
@@ -38,6 +88,8 @@
     nav a:hover {
       text-decoration: underline;
     }
+
+    /* Sections */
     section {
       padding: 4rem 2rem;
       text-align: center;
@@ -45,19 +97,8 @@
     h1, h2 {
       color: #000d2b;
     }
-    .btn {
-      margin-top: 1rem;
-      display: inline-block;
-      background: #000d2b;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: 500;
-    }
-    .btn:hover {
-      background: #001a4d;
-    }
+
+    /* Service Cards */
     .service-list {
       display: flex;
       flex-wrap: wrap;
@@ -76,6 +117,8 @@
       color: #000d2b;
       margin-bottom: 1rem;
     }
+
+    /* Form Styles */
     form {
       max-width: 500px;
       margin: 2rem auto;
@@ -92,6 +135,8 @@
       border: 1px solid #ccc;
       border-radius: 4px;
     }
+
+    /* Footer */
     footer {
       background: #000d2b;
       color: white;
@@ -102,8 +147,20 @@
   </style>
 </head>
 <body>
+
+  <!-- Landing Page -->
+  <div class="landing-page" id="landing-page">
+    <img src="vector_ready_logo_2_inPixio.png" alt="CONSTANT CODING LLC Logo" class="logo" />
+    <h1>Powering Innovation Through Code</h1>
+    <p class="tagline">Software Systems. Digital Solutions. Hardware Repairs.</p>
+    <div class="cta">
+      <button onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth' })">Explore Services</button>
+    </div>
+  </div>
+
+  <!-- Main Website Content -->
   <header>
-    <img src="/mnt/data/vector_ready_logo_2_inPixio.png" alt="Constant Coding Logo" />
+    <img src="vector_ready_logo_2_inPixio.png" alt="Constant Coding Logo" />
     <h1>CONSTANT CODING LLC</h1>
     <nav>
       <a href="#services">Services</a>
@@ -183,5 +240,6 @@
       <a href="#payment" style="color: #00bfff; text-decoration: none; margin: 0 0.5rem;">Payment</a>
     </p>
   </footer>
+
 </body>
 </html>
