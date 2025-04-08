@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ticketing System - CONSTANTLY CODING LLC</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  background-color: #0b1120; /* Navy Blue Background */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Background Logo Styles */
+.background-logo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0.1;
+  pointer-events: none;
+  max-width: 100%;
+  max-height: 100%;
+  width: 80%;
+  height: auto;
+  animation: fadeInBackground 10s infinite;
+}
+
+@keyframes fadeInBackground {
+  0% {
+    opacity: 0.05;
+  }
+  50% {
+    opacity: 0.15;
+  }
+  100% {
+    opacity: 0.05;
+  }
+}
+
+/* Landing Page Styles */
+.landing-page {
+  font-family: 'Orbitron', sans-serif;
+  background: #0b1120;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  background-size: cover;
+  filter: brightness(0.8);
+  animation: fadeIn 2s ease-in;
+}
+
+.landing-page h1 {
+  font-size: 4rem;
+  color: #38bdf8;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  animation: slideInFromLeft 1.5s ease-out;
+}
+
+.landing-page p.tagline {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  color: #e2e8f0;
+  animation: fadeInText 2s forwards 1.5s;
+}
+
+.cta button {
+  background: #ff7a00;
+  color: #0f172a;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  animation: fadeInButton 2s forwards 2.5s;
+}
+
+.cta button:hover {
+  background: #e77c00;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInButton {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animated Logo */
+.logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 5px solid #38bdf8;
+  padding: 10px;
+  animation: logoSpin 5s infinite linear, logoGlow 2s infinite alternate;
+}
+
+@keyframes logoSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes logoGlow {
+  0% {
+    box-shadow: 0 0 10px #38bdf8, 0 0 20px #00bfff;
+  }
+  100% {
+    box-shadow: 0 0 20px #38bdf8, 0 0 40px #00bfff;
+  }
+}
+
+/* ------------------------------ */
+/* MOBILE RESPONSIVE STYLES      */
+/* ------------------------------ */
+@media (max-width: 768px) {
+  .landing-page h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+
+  .landing-page p.tagline {
+    font-size: 1rem;
+  }
+
+  .cta button {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 14px 20px;
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .background-logo {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-page h1 {
+    font-size: 2rem;
+  }
+
+  .landing-page p.tagline {
+    font-size: 0.95rem;
+  }
+
+  .cta button {
+    font-size: 1rem;
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+    padding: 6px;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="cable-running.html">Cable Running</a>
+      <a href="app-creation.html">App/Web</a>
+      <a href="networking.html">Networking</a>
+      <a href="contact-us.html">Contact</a>
+      <a href="store.html">Store</a>
+      <a href="payments.html">Payments</a>
+    </nav>
+  </header>
+
+  <section>
+    <h1>Ticketing System</h1>
+    <p>Our ticketing system is designed to streamline customer support, simplify issue tracking, and improve communication between your team and clients. Whether you're a small business or an enterprise, our flexible ticketing solutions are built to scale with you.</p>
+    <h2>Features:</h2>
+    <ul>
+      <li>Customizable workflows</li>
+      <li>Multi-channel support</li>
+      <li>Automated ticket assignment</li>
+    </ul>
+    <h2>Pricing:</h2>
+    <p>Starts at $XXX (based on complexity and features)</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 CONSTANTLY CODING LLC. All Rights Reserved.</p>
+  </footer>
+</body>
+
+</html>
