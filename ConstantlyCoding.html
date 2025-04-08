@@ -187,122 +187,68 @@
       color: #38bdf8; /* Neon Blue */
     }
 
-    /* Sections */
-    section {
+    /* Services Section */
+    #examples-section {
+      text-align: center;
       padding: 4rem 2rem;
-      text-align: center;
-    }
-    h1, h2 {
-      color: #38bdf8; /* Neon Blue */
+      background-color: #0b1120;
     }
 
-    /* Service Cards */
-    .service-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-    }
-    .service {
-      background: #1f2937; /* Darker background for service cards */
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      padding: 2rem;
-      width: 280px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease-in-out, background-color 0.3s;
-    }
-    .service:hover {
-      transform: translateY(-10px);
-      background-color: #ff7a00; /* Vibrant Orange */
-    }
-    .service h3 {
-      color: #fff;
-      margin-bottom: 1rem;
-    }
-    .service p {
-      color: #e2e8f0;
+    #examples-section h2 {
+      color: #38bdf8;
     }
 
-    /* Form Styles */
-    form {
-      max-width: 500px;
-      margin: 2rem auto;
-      background: #1f2937; /* Dark Background */
-      padding: 2rem;
+    .cta-button {
+      background: #38bdf8;
+      color: #0f172a;
+      padding: 12px 30px;
+      border: none;
+      font-size: 1.2rem;
       border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: left;
+      cursor: pointer;
+      transition: background 0.3s ease;
     }
-    input, textarea {
+
+    .cta-button:hover {
+      background: #0ea5e9;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
       width: 100%;
-      padding: 0.75rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding-top: 60px;
     }
 
-    /* Footer */
-    footer {
-      background: #0b1120; /* Navy Blue */
+    .modal-content {
+      background-color: #1f2937;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 1200px;
+    }
+
+    .close {
       color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 3rem;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
     }
 
-    /* Media Queries for Responsiveness */
-    @media (max-width: 768px) {
-      .landing-page h1 {
-        font-size: 3rem;
-      }
-      .landing-page p.tagline {
-        font-size: 1rem;
-      }
-      .cta button {
-        font-size: 1rem;
-        padding: 10px 25px;
-      }
-      .service {
-        width: 100%;
-        margin-bottom: 1.5rem;
-      }
-      .service-list {
-        flex-direction: column;
-        gap: 2rem;
-      }
-      header img {
-        height: 50px;
-      }
-      .logo {
-        width: 100px;
-        height: 100px;
-      }
+    .close:hover,
+    .close:focus {
+      color: #ff7a00;
+      text-decoration: none;
+      cursor: pointer;
     }
-
-    @media (max-width: 480px) {
-      .landing-page h1 {
-        font-size: 2.5rem;
-      }
-      .cta button {
-        font-size: 1rem;
-        padding: 10px 20px;
-      }
-      .service {
-        width: 100%;
-      }
-      .service-list {
-        gap: 1rem;
-      }
-      .logo {
-        width: 90px;
-        height: 90px;
-      }
-      footer {
-        padding: 0.5rem;
-      }
-    }
-
   </style>
 </head>
 <body>
@@ -320,82 +266,26 @@
     </div>
   </div>
 
-  <!-- Main Website Content -->
-  <header>
-    <img src="vector_ready_logo_2_inPixio.png" alt="Constant Coding Logo" />
-    <h1>CONSTANTLY CODING LLC</h1>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a href="#payment">Payment</a>
-    </nav>
-  </header>
+  <script>
+    // Modal display logic
+    var modal = document.getElementById("examplesModal");
+    var btn = document.getElementById("showModalBtn");
+    var span = document.getElementsByClassName("close")[0];
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="service-list">
-      <div class="service">
-        <h3>Ticketing Systems</h3>
-        <p>Custom ticketing systems to streamline operations.<br><strong>$75/month + $20 IT Support</strong></p>
-      </div>
-      <div class="service">
-        <h3>Invoice Systems</h3>
-        <p>User-friendly invoicing tools for smooth transactions.<br><strong>$60/month</strong></p>
-      </div>
-      <div class="service">
-        <h3>Remote Access</h3>
-        <p>Secure access to systems remotely.<br><strong>$600/month + $175 IT Support</strong></p>
-      </div>
-      <div class="service">
-        <h3>App & Website Development</h3>
-        <p>Custom applications & responsive websites.<br><strong>From $1000 (web) / $1500 (app) + $250 IT Support</strong></p>
-      </div>
-      <div class="service">
-        <h3>Electronic Repairs</h3>
-        <p>Expert diagnostics and repairs.<br><strong>$15 Diagnostic / $50+ Repairs</strong></p>
-      </div>
-    </div>
-  </section>
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>At CONSTANTLY CODING LLC, we don’t just build software—we engineer solutions. We specialize in delivering high-quality systems like ticketing platforms, remote access infrastructures, and digital experiences that drive efficiency and growth. Let’s build your tech future, together.</p>
-  </section>
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Let’s talk. Whether it’s a quick question or a full project, we’re here to help.</p>
-    <form id="contact-form">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit" class="btn">Send</button>
-    </form>
-  </section>
-
-  <section id="payment">
-    <h2>Make a Payment</h2>
-    <p>Pay securely via PayPal.</p>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-      <input type="hidden" name="cmd" value="_xclick" />
-      <input type="hidden" name="business" value="your-paypal-business-email@example.com" />
-      <input type="hidden" name="item_name" value="Custom Software Development" />
-      <input type="hidden" name="amount" value="1000" />
-      <input type="hidden" name="currency_code" value="USD" />
-      <input type="submit" value="Pay Now" />
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 CONSTANTLY CODING LLC. All Rights Reserved.</p>
-  </footer>
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
 
 </body>
 </html>
