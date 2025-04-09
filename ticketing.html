@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ticketing System - CONSTANTLY CODING LLC</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #0b1120;
+      color: white;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    nav {
+      background-color: #1e2a47;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 15px;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    nav a {
+      color: #38bdf8;
+      text-decoration: none;
+      margin: 10px 15px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00bfff;
+    }
+
+    .background-logo {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      opacity: 0.08;
+      pointer-events: none;
+      width: 80%;
+      height: auto;
+      animation: fadeInBackground 10s infinite;
+    }
+
+    @keyframes fadeInBackground {
+      0% { opacity: 0.05; }
+      50% { opacity: 0.12; }
+      100% { opacity: 0.05; }
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    section h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #38bdf8;
+    }
+
+    section h2 {
+      font-size: 1.7rem;
+      margin-top: 30px;
+      color: #38bdf8;
+    }
+
+    section p, section li {
+      font-size: 1.1rem;
+      color: #e2e8f0;
+      margin-top: 10px;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+      text-align: left;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    footer {
+      background-color: #1e2a47;
+      color: #e2e8f0;
+      text-align: center;
+      padding: 20px;
+      font-weight: 600;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      section h1 {
+        font-size: 2.2rem;
+      }
+
+      section h2 {
+        font-size: 1.4rem;
+      }
+
+      section p, section li {
+        font-size: 1rem;
+      }
+
+      nav a {
+        font-size: 1rem;
+        margin: 8px 10px;
+      }
+
+      .background-logo {
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      section h1 {
+        font-size: 1.8rem;
+      }
+
+      section h2 {
+        font-size: 1.2rem;
+      }
+
+      section p, section li {
+        font-size: 0.95rem;
+      }
+
+      footer {
+        font-size: 0.85rem;
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <img src="assets/logo.png" alt="Background Logo" class="background-logo" />
+
+  <header>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="cable-running.html">Cable Running</a>
+      <a href="app-creation.html">App/Web</a>
+      <a href="networking.html">Networking</a>
+      <a href="contact-us.html">Contact</a>
+      <a href="store.html">Store</a>
+      <a href="payments.html">Payments</a>
+    </nav>
+  </header>
+
+  <section>
+    <h1>Ticketing System</h1>
+    <p>Our ticketing system is designed to streamline customer support, simplify issue tracking, and improve communication between your team and clients. Whether you're a small business or an enterprise, our flexible ticketing solutions are built to scale with you.</p>
+
+    <h2>Features:</h2>
+    <ul>
+      <li>Customizable workflows</li>
+      <li>Multi-channel support</li>
+      <li>Automated ticket assignment</li>
+    </ul>
+
+    <h2>Pricing:</h2>
+    <p>Starts at $XXX (based on complexity and features)</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 CONSTANTLY CODING LLC. All Rights Reserved.</p>
+  </footer>
+</body>
+
+</html>
