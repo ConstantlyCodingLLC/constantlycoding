@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Store | CONSTANTLY CODING LLC</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  background-color: #0b1120;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Home Button */
+.home-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.home-button img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 5px solid #38bdf8;
+  padding: 5px;
+  animation: logoGlow 3s infinite alternate;
+}
+
+/* Background Logo Styles */
+.background-logo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0.1;
+  pointer-events: none;
+  max-width: 100%;
+  max-height: 100%;
+  width: 80%;
+  height: auto;
+  animation: fadeInBackground 10s infinite;
+}
+
+/* Keyframes */
+@keyframes fadeInBackground {
+  0% { opacity: 0.05; }
+  50% { opacity: 0.15; }
+  100% { opacity: 0.05; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes fadeInText {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInButton {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes logoGlow {
+  0% { box-shadow: 0 0 15px #38bdf8, 0 0 30px #00bfff; }
+  100% { box-shadow: 0 0 25px #38bdf8, 0 0 50px #00bfff; }
+}
+
+/* Landing Page */
+.landing-page {
+  font-family: 'Orbitron', sans-serif;
+  background: #0b1120;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 2s ease-in;
+}
+
+/* Logo */
+.logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 5px solid #38bdf8;
+  padding: 10px;
+  animation: logoSpin 5s infinite linear, logoGlow 2s infinite alternate;
+}
+
+@keyframes logoSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* About Section */
+#about {
+  margin: 50px auto;
+  max-width: 800px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  text-align: justify;
+}
+
+#about h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: #38bdf8;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 1.1rem;
+  color: #e2e8f0;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #1e2a47;
+  color: #e2e8f0;
+  text-align: center;
+  padding: 20px;
+  font-weight: 600;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  #about h2 {
+    font-size: 2rem;
+  }
+
+  #about p {
+    font-size: 1rem;
+  }
+
+  .home-button img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .cta button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .background-logo {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  #about h2 {
+    font-size: 1.6rem;
+  }
+
+  #about p {
+    font-size: 0.95rem;
+  }
+
+  footer {
+    font-size: 0.85rem;
+    padding: 16px;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+  <h1>COMING SOON!</h1>
+  <h2>The Store is under development. We’re working hard to bring it to you.</h2>
+  <p>We appreciate your patience! Stay tuned for more updates and product releases.</p>
+
+  <a href="home.html" class="cta-button">Back to Home</a>
+
+  <footer>
+    <p>&copy; 2025 CONSTANTLY CODING LLC. All Rights Reserved.</p>
+  </footer>
+
+</body>
+
+</html>
