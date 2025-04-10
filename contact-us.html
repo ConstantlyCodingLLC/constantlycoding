@@ -204,10 +204,11 @@
 </section>
 
 <!-- EmailJS -->
+<!-- REPLACE your current <script> section with this one -->
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
   window.onload = function () {
-    emailjs.init("E9OsYJGehSyOtP6bv"); // Your public key
+    emailjs.init("E9OsYJGehSyOtP6bv"); // Your EmailJS public key
 
     const form = document.getElementById("contact-form");
     const successMessage = document.getElementById("success-message");
@@ -215,12 +216,24 @@
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      emailjs.sendForm("service_eh25yzg", "template_r8c8xqe", this)
+      // Step 1: Send message to YOU
+      emailjs.sendForm("service_eh25yzg", "template_r8c8xqe", form)
+        .then(function () {
+          // Step 2: Send auto-reply to USER
+          const formData = new FormData(form);
+          const userData = {
+            to_name: formData.get("from_name"),
+            to_email: formData.get("reply_to")
+          };
+
+          return emailjs.send("service_eh25yzg", "template_auto_reply", userData);
+        })
         .then(function () {
           form.reset();
           form.style.display = "none";
           successMessage.style.display = "block";
-        }, function (error) {
+        })
+        .catch(function (error) {
           console.error("FAILED...", error);
           alert("Oops! Something went wrong: " + error.text);
         });
