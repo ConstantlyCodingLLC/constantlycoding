@@ -185,62 +185,52 @@
   </header>
 
   <!-- Contact Form -->
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>Let’s talk. Whether it’s a quick question or a full project, we’re here to help.</p>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Let’s talk. Whether it’s a quick question or a full project, we’re here to help.</p>
 
-  <form id="contact-form">
-    <input type="text" name="from_name" placeholder="Your Name" required />
-    <input type="email" name="reply_to" placeholder="Your Email" required />
-    <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+    <form id="contact-form">
+      <input type="text" name="from_name" placeholder="Your Name" required />
+      <input type="email" name="reply_to" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
 
-  <div id="success-message" class="success-message">
-    Thank you! Your message has been successfully sent. We'll get back to you soon.
-    <br /><br />
-    <a href="home.html" class="cta-button">GO TO HOME PAGE</a>
-  </div>
-</section>
+      <!-- Hidden recipient email -->
+      <input type="hidden" name="to_email" value="constantlycodingllc@gmail.com" />
 
-<!-- EmailJS -->
-<!-- REPLACE your current <script> section with this one -->
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  window.onload = function () {
-    emailjs.init("E9OsYJGehSyOtP6bv"); // Your EmailJS public key
+      <button type="submit">Send Message</button>
+    </form>
 
-    const form = document.getElementById("contact-form");
-    const successMessage = document.getElementById("success-message");
+    <div id="success-message" class="success-message">
+      Thank you! Your message has been successfully sent. We'll get back to you soon.
+      <br /><br />
+      <a href="home.html" class="cta-button">GO TO HOME PAGE</a>
+    </div>
+  </section>
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
+  <!-- EmailJS -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    window.onload = function () {
+      emailjs.init("E9OsYJGehSyOtP6bv"); // Your public key
 
-      // Step 1: Send message to YOU
-      emailjs.sendForm("service_eh25yzg", "template_r8c8xqe", form)
-        .then(function () {
-          // Step 2: Send auto-reply to USER
-          const formData = new FormData(form);
-          const userData = {
-            to_name: formData.get("from_name"),
-            to_email: formData.get("reply_to")
-          };
+      const form = document.getElementById("contact-form");
+      const successMessage = document.getElementById("success-message");
 
-          return emailjs.send("service_eh25yzg", "template_auto_reply", userData);
-        })
-        .then(function () {
-          form.reset();
-          form.style.display = "none";
-          successMessage.style.display = "block";
-        })
-        .catch(function (error) {
-          console.error("FAILED...", error);
-          alert("Oops! Something went wrong: " + error.text);
-        });
-    });
-  };
-</script>
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
+        emailjs.sendForm("service_eh25yzg", "template_r8c8xqe", this)
+          .then(function () {
+            form.reset();
+            form.style.display = "none";
+            successMessage.style.display = "block";
+          }, function (error) {
+            console.error("FAILED...", error);
+            alert("Oops! Something went wrong: " + error.text);
+          });
+      });
+    };
+  </script>
 
   <footer>
     <p>&copy; 2025 CONSTANT CODING LLC. All Rights Reserved.</p>
