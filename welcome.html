@@ -29,14 +29,14 @@
       min-height: 100vh;
     }
 
-    /* Home Button */
     .home-button {
-      position: absolute;
+      position: fixed;
       top: 20px;
       right: 20px;
       background: transparent;
       border: none;
       cursor: pointer;
+      z-index: 10;
     }
 
     .home-button img {
@@ -48,7 +48,6 @@
       animation: logoGlow 3s infinite alternate;
     }
 
-    /* Background Logo Styles */
     .background-logo {
       position: fixed;
       top: 50%;
@@ -57,14 +56,11 @@
       z-index: -1;
       opacity: 0.1;
       pointer-events: none;
-      max-width: 100%;
-      max-height: 100%;
-      width: 80%;
+      max-width: 90%;
       height: auto;
       animation: fadeInBackground 10s infinite;
     }
 
-    /* Keyframes */
     @keyframes fadeInBackground {
       0% {
         opacity: 0.05;
@@ -79,46 +75,6 @@
       }
     }
 
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-    @keyframes slideInFromLeft {
-      0% {
-        transform: translateX(-100%);
-      }
-
-      100% {
-        transform: translateX(0);
-      }
-    }
-
-    @keyframes fadeInText {
-      0% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-    @keyframes fadeInButton {
-      0% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
     @keyframes logoGlow {
       0% {
         box-shadow: 0 0 15px #38bdf8, 0 0 30px #00bfff;
@@ -129,22 +85,6 @@
       }
     }
 
-    /* Landing Page */
-    .landing-page {
-      font-family: 'Orbitron', sans-serif;
-      background: #0b1120;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
-      padding: 20px;
-      flex-grow: 1;
-      animation: fadeIn 2s ease-in;
-    }
-
-    /* Logo */
     .logo {
       width: 120px;
       height: 120px;
@@ -164,11 +104,10 @@
       }
     }
 
-    /* About Section */
     #about {
-      margin: 50px auto;
-      max-width: 800px;
-      padding: 20px;
+      margin: 100px auto 50px;
+      max-width: 900px;
+      padding: 30px 20px;
       background-color: rgba(0, 0, 0, 0.5);
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
@@ -186,27 +125,22 @@
     #about p {
       font-size: 1.1rem;
       color: #e2e8f0;
-      margin-bottom: 20px;
     }
 
-    /* Footer */
     footer {
       background-color: #1e2a47;
       color: #e2e8f0;
       text-align: center;
       padding: 20px;
       font-weight: 600;
-      width: 100%;
+      margin-top: auto;
     }
 
-    /* Mobile Responsiveness */
-    @media (max-width: 768px) {
-      #about h2 {
-        font-size: 2rem;
-      }
-
-      #about p {
-        font-size: 1rem;
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 992px) {
+      .logo {
+        width: 100px;
+        height: 100px;
       }
 
       .home-button img {
@@ -214,23 +148,37 @@
         height: 50px;
       }
 
-      .logo {
-        width: 90px;
-        height: 90px;
+      #about {
+        padding: 20px 15px;
+        margin: 80px 10px 40px;
       }
 
-      .cta button {
-        width: 100%;
+      #about h2 {
+        font-size: 2rem;
+      }
+
+      #about p {
         font-size: 1rem;
-        padding: 12px;
-      }
-
-      .background-logo {
-        width: 90%;
       }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 576px) {
+      .logo {
+        width: 80px;
+        height: 80px;
+        padding: 5px;
+      }
+
+      .home-button img {
+        width: 45px;
+        height: 45px;
+      }
+
+      #about {
+        padding: 20px 10px;
+        margin: 60px 10px 30px;
+      }
+
       #about h2 {
         font-size: 1.6rem;
       }
@@ -243,25 +191,28 @@
         font-size: 0.85rem;
         padding: 16px;
       }
+
+      .background-logo {
+        width: 95%;
+      }
     }
   </style>
 </head>
 
 <body>
-<!-- Background Logo Image -->
-<img src="black_background_logo.png" alt="Background Logo" class="background-logo" />
+  <!-- Background Logo Image -->
+  <img src="black_background_logo.png" alt="Background Logo" class="background-logo" />
 
   <!-- Home Button in the Top Right -->
   <button class="home-button" onclick="window.location.href='home.html';">
-    <!-- Replace with your logo image path -->
-   <img src="vector_ready_logo_2_inPixio.png" alt="CONSTANT CODING LLC Logo" class="logo" />
+    <img src="vector_ready_logo_2_inPixio.png" alt="CONSTANT CODING LLC Logo" class="logo" />
   </button>
 
   <!-- About Section -->
   <section id="about">
     <h2>Welcome to Constantly Coding LLC</h2>
     <p>
-“At Constantly Coding LLC, we’re dedicated to helping small businesses succeed by offering affordable, customized tech solutions. From networking and cable installations to app development and ticketing systems, we deliver results that fit your budget and meet your specific needs. Let us help you streamline operations, improve customer experience, and build a tech infrastructure that supports your business growth.”
+      “At Constantly Coding LLC, we’re dedicated to helping small businesses succeed by offering affordable, customized tech solutions. From networking and cable installations to app development and ticketing systems, we deliver results that fit your budget and meet your specific needs. Let us help you streamline operations, improve customer experience, and build a tech infrastructure that supports your business growth.”
     </p>
   </section>
 
