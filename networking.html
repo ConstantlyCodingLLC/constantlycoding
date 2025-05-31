@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <style>
+    <style>
     * {
       margin: 0;
       padding: 0;
@@ -18,34 +18,10 @@
 
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #0b1120;
       color: white;
-      line-height: 1.6;
+      background-color: #0b1120;
       overflow-x: hidden;
-    }
-
-    header {
-      background-color: #1e2a47;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 16px;
-      padding: 15px;
-    }
-
-    nav a {
-      color: #38bdf8;
-      text-decoration: none;
-      font-family: 'Orbitron', sans-serif;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #ffffff;
+      line-height: 1.6;
     }
 
     .background-logo {
@@ -56,8 +32,9 @@
       z-index: -1;
       opacity: 0.1;
       pointer-events: none;
+      max-width: 100%;
+      max-height: 100%;
       width: 80%;
-      max-width: 1000px;
       height: auto;
       animation: fadeInBackground 10s infinite;
     }
@@ -68,13 +45,32 @@
       100% { opacity: 0.05; }
     }
 
+    header {
+      padding: 20px;
+      text-align: center;
+      background-color: #0b1120;
+      animation: fadeIn 2s ease-in;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #38bdf8;
+      text-decoration: none;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     section {
-      max-width: 900px;
-      margin: 40px auto;
+      max-width: 800px;
+      margin: 80px auto 40px;
       padding: 20px;
       background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
       animation: fadeIn 1.5s ease-in;
     }
 
@@ -82,36 +78,27 @@
       font-family: 'Orbitron', sans-serif;
       font-size: 2.5rem;
       color: #38bdf8;
-      text-align: center;
       margin-bottom: 20px;
+      text-align: center;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      color: #e2e8f0;
+      margin-bottom: 20px;
+      text-align: justify;
     }
 
     section h2 {
       font-size: 1.5rem;
-      color: #ffffff;
-      margin-top: 25px;
-      margin-bottom: 10px;
-    }
-
-    section p,
-    section ul {
-      font-size: 1.1rem;
-      color: #e2e8f0;
-      margin-bottom: 10px;
-    }
-
-    ul {
-      padding-left: 20px;
-      list-style: disc;
-    }
-
-    .service p {
-      margin-bottom: 10px;
-    }
-
-    .price {
-      font-weight: bold;
       color: #38bdf8;
+      margin-top: 20px;
+    }
+
+    section ul {
+      list-style-type: disc;
+      margin-left: 20px;
+      color: #e2e8f0;
     }
 
     footer {
@@ -120,7 +107,6 @@
       text-align: center;
       padding: 20px;
       font-weight: 600;
-      font-size: 1rem;
     }
 
     @keyframes fadeIn {
@@ -128,44 +114,22 @@
       100% { opacity: 1; }
     }
 
-    /* Responsive Design */
     @media (max-width: 768px) {
-      section {
-        margin: 20px 15px;
-        padding: 15px;
-      }
-
       section h1 {
         font-size: 2rem;
       }
 
-      section h2 {
-        font-size: 1.3rem;
-      }
-
-      section p,
-      section ul {
+      section p, section ul {
         font-size: 1rem;
       }
     }
 
     @media (max-width: 480px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-      }
-
       section h1 {
         font-size: 1.6rem;
       }
 
-      section h2 {
-        font-size: 1.2rem;
-      }
-
-      section p,
-      section ul {
+      section p, section ul {
         font-size: 0.95rem;
       }
 
@@ -187,9 +151,6 @@
       <a href="ticketing.html">Ticketing System</a>
       <a href="cable-running.html">Cable Running</a>
       <a href="app-creation.html">App/Web</a>
-      <a href="contact-us.html">Contact</a>
-      <a href="store.html">Store</a>
-      <a href="payments.html">Payments</a>
     </nav>
   </header>
 
