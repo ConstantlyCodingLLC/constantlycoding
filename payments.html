@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Make a Payment | CONSTANTLY CODING LLC</title>
+  <title>Make a Payment | CONSTANT CODING LLC</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
@@ -16,125 +16,114 @@
 
     body {
       font-family: 'Roboto', sans-serif;
+      background-color: #0b1120;
       color: white;
-      background-color: #0b1120;
-      overflow-x: hidden;
-      line-height: 1.6;
-    }
-
-    /* Background Logo */
-    .background-logo {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: -1;
-      opacity: 0.1;
-      pointer-events: none;
-      max-width: 100%;
-      max-height: 100%;
-      width: 80%;
-      height: auto;
-      animation: fadeInBackground 10s infinite;
-    }
-
-    @keyframes fadeInBackground {
-      0% { opacity: 0.05; }
-      50% { opacity: 0.15; }
-      100% { opacity: 0.05; }
-    }
-
-    header {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      align-items: center;
       padding: 20px;
-      text-align: center;
-      background-color: #0b1120;
-      animation: fadeIn 2s ease-in;
     }
 
-    nav a {
-      margin: 0 15px;
+    .home-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .home-button button {
+      background: transparent;
+      border: 2px solid #38bdf8;
       color: #38bdf8;
-      text-decoration: none;
-      font-family: 'Orbitron', sans-serif;
-      font-weight: 500;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .home-button button:hover {
+      background-color: #38bdf8;
+      color: #0b1120;
     }
 
-    section {
-      max-width: 800px;
-      margin: 80px auto 40px;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-      animation: fadeIn 1.5s ease-in;
+    .container {
+      max-width: 500px;
+      width: 100%;
+      background-color: #1e293b;
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      animation: fadeIn 1.2s ease;
+      margin-top: 100px;
     }
 
-    section h1 {
-      font-family: 'Orbitron', sans-serif;
+    h1 {
       font-size: 2.5rem;
       color: #38bdf8;
       margin-bottom: 20px;
-      text-align: center;
     }
 
-    section p {
+    p {
+      font-size: 1rem;
+      color: #e2e8f0;
+      margin-bottom: 30px;
+    }
+
+    form input[type="submit"] {
+      background: #ff7a00;
+      color: #0f172a;
+      border: none;
+      padding: 14px 30px;
       font-size: 1.1rem;
-      color: #e2e8f0;
-      margin-bottom: 20px;
-      text-align: justify;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
     }
 
-    section h2 {
-      font-size: 1.5rem;
-      color: #38bdf8;
-      margin-top: 20px;
-    }
-
-    section ul {
-      list-style-type: disc;
-      margin-left: 20px;
-      color: #e2e8f0;
+    form input[type="submit"]:hover {
+      background: #e76c00;
     }
 
     footer {
+      margin-top: auto;
       background-color: #1e2a47;
       color: #e2e8f0;
       text-align: center;
-      padding: 20px;
-      font-weight: 600;
+      padding: 16px;
+      font-size: 0.9rem;
+      width: 100%;
+      border-top: 1px solid #2c3e50;
     }
 
     @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
-    @media (max-width: 768px) {
-      section h1 {
-        font-size: 2rem;
+      0% {
+        opacity: 0;
+        transform: translateY(10px);
       }
-
-      section p, section ul {
-        font-size: 1rem;
+      100% {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
 
     @media (max-width: 480px) {
-      section h1 {
-        font-size: 1.6rem;
+      .container {
+        padding: 20px 15px;
       }
 
-      section p, section ul {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
         font-size: 0.95rem;
       }
 
-      footer {
-        font-size: 0.85rem;
-        padding: 16px;
+      form input[type="submit"] {
+        width: 100%;
+        font-size: 1rem;
       }
     }
   </style>
@@ -150,7 +139,7 @@
   <!-- Payment Card -->
   <div class="container">
     <h1>Make a Payment</h1>
-    <p>Thank you for choosing CONSTANTLY CODING LLC.<br>Please click below to make a secure payment.</p>
+    <p>Thank you for choosing CONSTANT CODING LLC.<br>Please click below to make a secure payment.</p>
 
     <!-- PayPal Payment Button -->
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -162,7 +151,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 CONSTANTLY CODING LLC. All Rights Reserved.</p>
+    <p>&copy; 2025 CONSTANT CODING LLC. All Rights Reserved.</p>
   </footer>
 
 </body>
