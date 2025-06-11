@@ -170,25 +170,38 @@
     }
   </style>
 </head>
-<!-- Review Section -->
-<section style="background-color: #1e293b; padding: 60px 20px;">
-  <h1 style="color: #38bdf8; margin-bottom: 30px;">What Our Clients Say</h1>
+<script>
+  const form = document.getElementById("reviewForm");
+  const reviewsDiv = document.getElementById("reviews");
 
-  <div class="review" style="max-width: 800px; margin: 0 auto 40px; text-align: left; border-left: 4px solid #38bdf8; padding-left: 20px;">
-    <p style="font-size: 1.1rem;">“The ticketing system is incredibly intuitive. We’ve cut our response time in half. Constantly Coding knows what they’re doing.”</p>
-    <p style="font-weight: bold; color: #e2e8f0; margin-top: 10px;">— Jamie L., Small Business Owner</p>
-  </div>
+  function loadReviews() {
+    const reviews = JSON.parse(localStorage.getItem("reviews") || "[]");
+    reviewsDiv.innerHTML = reviews.map(r => `
+      <div style="background-color: #0f172a; padding: 15px 20px; margin-bottom: 15px; border-left: 4px solid #38bdf8; border-radius: 6px;">
+        <p style="font-size: 1.1rem;">"${r.message}"</p>
+        <p style="font-weight: bold; color: #e2e8f0; margin-top: 10px;">— ${r.name}</p>
+      </div>
+    `).join("");
+  }
 
-  <div class="review" style="max-width: 800px; margin: 0 auto 40px; text-align: left; border-left: 4px solid #38bdf8; padding-left: 20px;">
-    <p style="font-size: 1.1rem;">“They ran all of our networking cable and had our office connected fast. Highly professional and clean work.”</p>
-    <p style="font-weight: bold; color: #e2e8f0; margin-top: 10px;">— Michael R., IT Manager</p>
-  </div>
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-  <div class="review" style="max-width: 800px; margin: 0 auto 40px; text-align: left; border-left: 4px solid #38bdf8; padding-left: 20px;">
-    <p style="font-size: 1.1rem;">“I had an app idea for months. Constantly Coding brought it to life in a way I didn’t think was possible!”</p>
-    <p style="font-weight: bold; color: #e2e8f0; margin-top: 10px;">— Sarah T., Entrepreneur</p>
-  </div>
-</section>
+    if (name && message) {
+      const newReview = { name, message };
+      const existing = JSON.parse(localStorage.getItem("reviews") || "[]");
+      existing.unshift(newReview); // Add newest to top
+      localStorage.setItem("reviews", JSON.stringify(existing));
+      form.reset();
+      loadReviews();
+    }
+  });
+
+  loadReviews();
+</script>
+
 
 <body>
 
@@ -215,6 +228,23 @@
       <a href="networking.html" class="cta-button">Networking</a>
     </div>
   </section>
+<!-- Review Submission & Display Section -->
+<section style="background-color: #1e293b; padding: 60px 20px;">
+  <h1 style="color: #38bdf8; margin-bottom: 30px;">Leave a Review</h1>
+
+  <form id="reviewForm" style="max-width: 600px; margin: 0 auto; text-align: left;">
+    <label>Name:<br>
+      <input type="text" id="name" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 6px; border: none;">
+    </label><br>
+    <label>Your Review:<br>
+      <textarea id="message" required rows="4" style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 6px; border: none;"></textarea>
+    </label><br>
+    <button type="submit" style="padding: 10px 20px; background-color: #38bdf8; border: none; color: #0b1120; font-weight: bold; border-radius: 6px; cursor: pointer;">Submit Review</button>
+  </form>
+
+  <h2 style="color: #38bdf8; margin-top: 40px; text-align: center;">What Others Are Saying</h2>
+  <div id="reviews" style="max-width: 800px; margin: 20px auto 0;"></div>
+</section>
 
   <!-- Footer -->
   <footer>
