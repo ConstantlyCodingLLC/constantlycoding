@@ -146,7 +146,8 @@
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
       <input type="hidden" name="cmd" value="_s-xclick" />
       <input type="hidden" name="hosted_button_id" value="YOUR_PAYPAL_BUTTON_ID" />
-      <input type="submit" value="Pay Now" />
+     <button id="pay-button">Pay Now</button>
+
     </form>
   </div>
 
@@ -154,6 +155,20 @@
   <footer>
     <p>&copy; 2025 CONSTANT CODING LLC. All Rights Reserved.</p>
   </footer>
+<script>
+  const stripe = Stripe("pk_test_YOUR_PUBLISHABLE_KEY"); // replace with your actual key
+
+  document.getElementById("pay-button").addEventListener("click", () => {
+    fetch("/api/create-checkout-session", {
+      method: "POST",
+    })
+      .then((res) => res.json())
+      .then((session) => {
+        return stripe.redirectToCheckout({ sessionId: session.id });
+      })
+      .catch((error) => console.error("Error:", error));
+  });
+</script>
 
 </body>
 
