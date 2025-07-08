@@ -46,7 +46,7 @@
   </footer>
 
   <script>
-    const stripe = Stripe("pk_test_YOUR_PUBLISHABLE_KEY"); // Replace with your real Stripe publishable key
+    const stripe = Stripe("pk_test_51RijnXARZDg2CsEHsnGIyao5dw48LK4ODzpcJCVfGI2W9Ts5ZbeYBuALA8UT2BumSq7APivpx4VTR3eBi7u1kLy400YsJnMFUt"); // Replace with your real Stripe publishable key
 
     document.getElementById("pay-button").addEventListener("click", function () {
       fetch("/api/create-checkout-session", {
