@@ -20,20 +20,15 @@
     <button onclick="window.location.href='home.html';">HOME</button>
   </div>
 
-  <!-- Payment Card -->
-  <div class="container">
-    <h1>Make a Payment</h1>
-    <p>Thank you for choosing CONSTANT CODING LLC.<br />Please click below to make a secure payment.</p>
 
     <!-- Stripe Payment Button -->
 <div class="container">
   <h1>Make a Payment</h1>
   <p>Thank you for choosing CONSTANT CODING LLC.<br>Please click below to make a secure payment.</p>
 
-  <a href="https://buy.stripe.com/test_fZu9AV2yj3Bx0ZFaHm1B600" target="_blank" rel="noopener noreferrer">
-    <button id="pay-button">Pay Now</button>
-  </a>
-</div>
+<a href="https://app.bluevine.com/dashboard/merchantAccounts/madashboard/mainvoices" target="_blank">
+  <button>Pay Now</button>
+</a>
 
 
   <!-- Footer -->
@@ -42,7 +37,7 @@
   </footer>
 
   <script>
-    const stripe = Stripe("pk_test_51RijnXARZDg2CsEHsnGIyao5dw48LK4ODzpcJCVfGI2W9Ts5ZbeYBuALA8UT2BumSq7APivpx4VTR3eBi7u1kLy400YsJnMFUt"); // Replace with your real Stripe publishable key
+    const stripe = Stripe("pk_live_51SOPHfRsrlfeIAgv7LKAMnh0i13avwWDmniizDh5XuQNtj7EBFJAUm98eGZFu5lDegseI5xMjfAlWB1r3kFXIMBk00XiCakhO7"); // Replace with your real Stripe publishable key
 
     document.getElementById("pay-button").addEventListener("click", function () {
       fetch("/api/create-checkout-session", {
@@ -61,3 +56,4 @@
 </body>
 
 </html>
+
